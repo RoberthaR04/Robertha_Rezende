@@ -1,12 +1,13 @@
+/* Estilo geral do corpo */
 body {
-    font-family: 'Roboto Slab', serif, sans-serif;
-    background-color: black;
-    background-size: cover;
-    color: rgb(250, 253, 255);
+    font-family: 'Quicksand', Arial, sans-serif; /* Fonte moderna e clean */
+    background-color: black; /* Fundo escuro para contraste */
+    color: rgb(250, 253, 255); /* Texto claro para boa legibilidade */
     margin: 0;
     padding: 0;
 }
 
+/* Fundo com transparência */
 body::before {
     content: '';
     position: fixed;
@@ -14,94 +15,105 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Transparência preta */
-    z-index: -1;
+    background: rgba(0, 0, 0, 0.7); /* Transparência suave */
+    z-index: -1; /* Evita sobreposição no conteúdo */
 }
 
-.home {
-    color: white;
-    text-align: center;
-    padding: 5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no texto */
-}
-
+/* Estilização do cabeçalho */
 header {
-    font-family:'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    color: azure;
+    font-family: 'Bebas Neue', sans-serif; /* Fonte elegante para destaque */
     text-align: center;
-    padding: 3rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    color: azure;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para profundidade */
+}
+
+header h1, header h2 {
+    margin: 0.5rem 0;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    font-size: 2.5rem; /* Tamanho maior para destaque */
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+header h2 {
+    font-size: 1.8rem; /* Subtítulo menor */
 }
 
-nav ul li {
-    margin: 0 1rem;
-}
-
+/* Espaçamento geral no conteúdo */
 main {
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
+/* Estilização dos cards */
 .card {
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-    border-color: rgb(188, 188, 255);
-    overflow: hidden;
-    background-color: rgb(255, 252, 252);
+    background-color: rgb(255, 252, 252); /* Fundo claro para contraste */
+    color: #333; /* Texto escuro no card */
+    border-radius: 0.5rem; /* Bordas levemente arredondadas */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    margin: 1rem auto; /* Espaçamento uniforme */
+    overflow: hidden; /* Evita elementos saírem dos limites */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.card:hover {
+    transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+/* Imagens dentro dos cards */
 .card img {
-    width: 100%;
-    border-radius: 0.5rem 0.5rem 0 0;
+    display: block;
+    margin: 1rem auto; /* Centraliza a imagem */
+    height: 100px; /* Altura fixa */
+    width: 100px; /* Largura fixa */
+    border-radius: 50%; /* Deixa a imagem redonda */
+    object-fit: cover; /* Mantém proporção ao recortar */
 }
 
+/* Conteúdo interno do card */
 .card-body {
+    text-align: center; /* Centraliza texto e botões */
     padding: 1rem;
-    text-align: center;
 }
 
-.card-linguagem a {
+.card-title {
+    font-family: 'Fredoka', sans-serif; /* Título estiloso */
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    line-height: 1.4; /* Espaçamento entre linhas */
+}
+
+/* Botões nos cards */
+.card a {
     display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: rgb(151, 187, 255);
-    color: white;
+    padding: 0.4rem 1rem;
+    background-color: rgb(0, 123, 255); /* Cor azul */
+    color: #fff;
     text-decoration: none;
-    border-radius: 0.25rem;
-    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
     transition: background-color 0.3s ease;
 }
 
-.card-linguagem a:hover {
-    background-color: rgb(121, 157, 235);
+.card a:hover {
+    background-color: rgb(0, 90, 185); /* Azul mais escuro */
 }
 
-.card-body2 {
+/* Seções gerais */
+section {
+    margin-bottom: 2rem;
+}
+
+/* Títulos das seções */
+h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.8rem;
     text-align: center;
-    margin-top: 2rem;
-}
-
-.card-body2 h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.carousel-inner img {
-    border-radius: 0.5rem;
-    width: 100%;
-    height: auto;
+    margin-bottom: 1.5rem;
+    color: azure;
 }
