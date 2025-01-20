@@ -54,6 +54,11 @@ main {
     margin: 1rem auto;
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: auto; /*ajusta o tamanho dos card*/
+    padding: 1rem;
 }
 
 #moving-title {
@@ -124,7 +129,7 @@ section {
 h2 {
     font-family: 'Archivo Black', sans-serif;
     font-size: 1.8rem;
-    text-align: center;
+    text-align: auto;
     margin-bottom: 1.5rem;
     color: rgb(231, 233, 245);
 }
@@ -155,15 +160,33 @@ h2 {
 
 @media (max-width: 768px) {
     .card img {
-        width: 100%;
+        width: 80%;
         height: auto;
+        max-width: 150px;
     }
 
     #moving-title {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .card-body {
-        padding: 0.5rem;
+        padding: 0.8rem;
+    }
+}
+
+/*para fontes*/
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #moving-title {
+        font-size: 1.2rem;
+        transform: translateX(50%); /* Ajuste o movimento para não ultrapassar tanto a tela */
     }
 }
